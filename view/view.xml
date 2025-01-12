@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_timestamp" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.timestamp</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Meeting Room" string="Meeting Room" name="meeting_room" logo="/base/static/description/settings.png">
+                    <block title="Room Booking Interval" id="meeting_room_booking_interval">
+                        <setting>
+                            <field name="room_meeting_interval" />
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
